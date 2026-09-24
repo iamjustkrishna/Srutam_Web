@@ -3,7 +3,7 @@
 > Private on-device AI voice notes: offline Whisper transcription, summaries, tasks, conversational chat over notes, BYOK + MCP server. Zero audio uploads for basic transcription.
 
 ## Core pages
-- Home: https://srutam.app/ — capture → understand → act; features; privacy; audiences; FAQ; download
+- Home: https://srutam.iamjustkrishna.app/ — capture → understand → act; features; privacy; audiences; FAQ; download
 - Google Play: https://play.google.com/store/apps/details?id=space.iamjustkrishna.srutam
 
 ## What Srutam does

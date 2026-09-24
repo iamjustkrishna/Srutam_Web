@@ -2,7 +2,7 @@
 
 > Srutam is a private, local-first AI voice notes app for Android. Turn spoken thoughts into organized, searchable knowledge — on your phone, on your terms.
 
-Site: https://srutam.app/
+Site: https://srutam.iamjustkrishna.app/
 Play: https://play.google.com/store/apps/details?id=space.iamjustkrishna.srutam
 
 ## Product

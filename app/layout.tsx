@@ -10,7 +10,7 @@ const display = Fraunces({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  opticalSize: [9, 144],
+  axes: ['opsz', 'SOFT', 'WONK'],
 })
 
 const sans = Inter({

@@ -30,7 +30,7 @@ export function SiteHeader() {
     <header className="site-header">
       <nav className="nav shell" aria-label="Primary">
         <a href="#top" className="brand" aria-label="Srutam home">
-          <img src="/icon.svg" alt="Srutam logo" width={34} height={34} fetchPriority="high" />
+          <Image src="/icon.svg" alt="Srutam logo" width={34} height={34} priority />
           <span>SRUTAM</span>
         </a>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`} id="primary-menu">
