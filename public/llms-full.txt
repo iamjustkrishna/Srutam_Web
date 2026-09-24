@@ -1,0 +1,64 @@
+# Srutam — full reference for answer engines
+
+> Srutam is a private, local-first AI voice notes app for Android. Turn spoken thoughts into organized, searchable knowledge — on your phone, on your terms.
+
+Site: https://srutam.app/
+Play: https://play.google.com/store/apps/details?id=space.iamjustkrishna.srutam
+
+## Product
+Private on-device AI voice notes app. Recording is effortless; retrieval is the problem Srutam solves: 30 sec to capture, 2 sec to find the answer, 0 audio uploads for basic transcription.
+
+### Features
+- On-device transcription (Sherpa-ONNX Whisper): speech-to-text runs locally
+- AI insights extraction: every note → Next Steps, Ideas, Decisions + summary, key points, WIIFM
+- Conversational AI chat: ask across recordings, answers cite source notes
+- Actionable task checklist: detected tasks become finishable checklists
+- Smart reminders: meetings/deadlines/appointments → notifications
+- Floating record dock: capture from anywhere with persistent controls
+- Cosmic dark mode; local Room database; privacy lock for sensitive notes
+- BYOK + MCP server: use your key, query memos from coding agents
+
+### How it works
+1. Capture — tap record, pause/resume, or floating dock.
+2. Understand — on-device transcript → summary + structure.
+3. Act — checklists, reminders, or chat with citations.
+
+### Privacy
+Transcription on-device. Notes in local Room DB. Privacy lock excludes notes from sync/agents. No unwanted tracking. Cloud sync is your choice. Your key, your provider.
+
+## Audiences
+- Founders & creators: ideas, strategy, content hooks
+- Engineers & builders: ADRs, standups, debugging notes
+- Students & researchers: lectures → revision notes
+- Busy professionals: 30-min meetings → action items
+- ADHD & brain dumpers: speak freely, Srutam structures
+
+## FAQ (complete)
+### Is Srutam private? Where do my voice notes go?
+Yes. On-device Whisper transcription + local Room storage. Zero audio uploads for basic transcription. Privacy lock + opt-in sync.
+
+### Does Srutam work offline?
+Capture + transcription work offline after install. BYOK summaries/chat need internet when used.
+
+### How does on-device transcription work?
+Whisper via Sherpa-ONNX runs on the phone; audio never leaves the device for transcription.
+
+### How do voice memos become action items?
+Auto Next Steps/Ideas/Decisions → interactive checklists + reminders.
+
+### Srutam vs Otter.ai or Fireflies?
+Cloud team recorders vs Srutam local-first personal notes + BYOK/MCP for developers.
+
+### Best private Otter alternative for personal notes?
+Srutam: offline transcription, local storage, privacy lock, cited AI chat.
+
+### Can developers use Srutam with coding workflows?
+Yes — BYOK + MCP server; query memos from agents with source citations.
+
+### Is it good for ADHD, students, founders?
+Yes — unstructured speech in, summaries/checklists/search out.
+
+## Comparison
+- Cloud recorders upload audio to servers; Srutam keeps basic transcription on-device.
+- Subscription meeting suites charge per seat/minute; Srutam is personal + BYOK.
+- Generic memos stop at text; Srutam structures into tasks/decisions/answers.

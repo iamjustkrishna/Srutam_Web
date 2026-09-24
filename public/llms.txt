@@ -1,0 +1,30 @@
+# Srutam — Private AI Voice Notes App (Android)
+
+> Private on-device AI voice notes: offline Whisper transcription, summaries, tasks, conversational chat over notes, BYOK + MCP server. Zero audio uploads for basic transcription.
+
+## Core pages
+- Home: https://srutam.app/ — capture → understand → act; features; privacy; audiences; FAQ; download
+- Google Play: https://play.google.com/store/apps/details?id=space.iamjustkrishna.srutam
+
+## What Srutam does
+- On-device transcription with Sherpa-ONNX Whisper; audio stays on the phone
+- AI insights: Next Steps, Ideas, Decisions; summary + key points + WIIFM
+- Conversational AI chat across recordings with cited source notes
+- Actionable task checklists + smart reminders from voice
+- Floating record dock, cosmic dark mode, local Room database + privacy lock
+- BYOK (bring your own AI key) + MCP server for coding workflows
+
+## Who it is for
+- Founders & creators capturing ideas while walking
+- Engineers recording architecture decisions and standups
+- Students turning lectures into revision notes
+- Professionals converting meetings into action items
+- ADHD brain dumpers who want structure without organizing first
+
+## FAQ (abridged — full answers on site + llms-full.txt)
+- Is Srutam private? Yes — local transcription + storage, opt-in sync.
+- Does it work offline? Capture + transcription yes; BYOK AI features need internet.
+- Srutam vs Otter.ai/Fireflies? They are cloud team recorders; Srutam is local-first personal notes.
+- How do voice memos become tasks? Auto Next Steps → checklists + reminders.
+
+Last updated: 2026-09-24
