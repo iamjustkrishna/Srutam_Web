@@ -114,7 +114,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 }
 .nav { min-height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: 0.8rem; letter-spacing: 0.3em; font-size: 0.85rem; font-weight: 800; }
-.brand img { width: 34px; height: 34px; object-fit: contain; }
+.brand img { width: 34px; height: 34px; object-fit: cover; border-radius: 24%; }
 .nav-links { display: flex; align-items: center; gap: 1.6rem; font-size: 0.9rem; color: var(--muted); }
 .nav-links a:hover, .text-link:hover, footer nav a:hover { color: var(--blue); }
 .nav-cta, .play-button {
@@ -169,7 +169,7 @@ html.dark .nav-cta, html.dark .play-button { background: #e8edf7; color: #0b1019
 .orb-one { width: min(400px, 90%); aspect-ratio: 1; background: radial-gradient(circle, #dbeafe 0, #eff6ff 45%, transparent 70%); }
 .orb-two { width: 240px; aspect-ratio: 1; right: 6%; bottom: 6%; background: radial-gradient(circle, rgb(96 165 250 / 0.55), transparent 70%); }
 html.dark .orb-one { background: radial-gradient(circle, rgb(29 78 216 / 0.35) 0, #0c1225 55%, transparent 72%); }
-.hero-logo { width: min(360px, 72%); height: auto; position: relative; z-index: 1; filter: drop-shadow(0 26px 28px rgb(29 78 216 / 0.24)); }
+.hero-logo { width: min(360px, 72%); height: auto; position: relative; z-index: 1; border-radius: 26%; filter: drop-shadow(0 26px 28px rgb(29 78 216 / 0.24)); }
 .floating-card {
   position: absolute; z-index: 2;
   background: color-mix(in srgb, var(--card-elev) 94%, transparent);
@@ -257,7 +257,7 @@ html.dark .feature-card .icon-wrap { background: rgb(37 99 235 / 0.2); }
 .faq-item p { color: var(--muted); margin: 0 0 1.1rem; font-size: 0.93rem; line-height: 1.7; }
 
 .final-cta { text-align: center; padding-block: clamp(5rem, 11vw, 9.5rem); display: flex; align-items: center; flex-direction: column; }
-.final-cta img { width: 78px; height: 78px; object-fit: contain; margin-bottom: 2rem; }
+.final-cta img { width: 78px; height: 78px; object-fit: cover; border-radius: 24%; margin-bottom: 2rem; }
 .final-cta .play-button { margin-top: 2.2rem; }
 .available { font-size: 0.78rem; color: var(--faint); margin-top: 1rem; }
 
@@ -265,7 +265,7 @@ html.dark .feature-card .icon-wrap { background: rgb(37 99 235 / 0.2); }
 .footer { border-top: 1px solid var(--line); padding-block: 2.2rem 2.5rem; }
 .footer-grid { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem 2rem; align-items: center; }
 .footer .brand { margin: 0; font-size: 0.8rem; }
-.footer .brand img { width: 26px; height: 26px; }
+.footer .brand img { width: 26px; height: 26px; border-radius: 24%; }
 .footer-tag { color: var(--faint); font-size: 0.78rem; margin: 0; }
 .footer nav { display: flex; gap: 1.2rem; font-size: 0.8rem; color: var(--muted); }
 .footer small { grid-column: 1 / -1; color: var(--faint); font-size: 0.75rem; }

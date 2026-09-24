@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     images: [
-      { url: '/icon.svg', width: 512, height: 512, alt: 'Srutam — private AI voice notes app' },
+      { url: '/apple-icon.png', alt: 'Srutam — private AI voice notes app' },
     ],
   },
   twitter: {
@@ -63,13 +63,13 @@ export const metadata: Metadata = {
     title: TITLE,
     description:
       'Private AI voice notes for Android: offline transcription, summaries, tasks, and chat over your notes.',
-    images: ['/icon.svg'],
+    images: ['/apple-icon.png'],
   },
   icons: {
     icon: [
       { url: '/icon-light-32x32.jpg', media: '(prefers-color-scheme: light)' },
       { url: '/icon-dark-32x32.jpg', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     apple: '/apple-icon.png',
   },

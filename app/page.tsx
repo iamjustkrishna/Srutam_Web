@@ -83,7 +83,7 @@ export default function Page() {
             <div className="orb orb-one" />
             <div className="orb orb-two" />
             <Image
-              src="/icon.svg"
+              src="/apple-icon.png"
               alt=""
               width={370}
               height={370}
@@ -296,7 +296,7 @@ export default function Page() {
         </section>
 
         <section className="final-cta shell" aria-labelledby="cta-heading">
-          <Image src="/icon.svg" alt="Srutam app icon" width={78} height={78} loading="lazy" />
+          <Image src="/apple-icon.png" alt="Srutam app icon" width={78} height={78} loading="lazy" />
           <p className="eyebrow">Pure voice. Crystallized thought.</p>
           <h2 id="cta-heading">
             Remember more.
@@ -316,7 +316,7 @@ export default function Page() {
       <footer className="footer shell">
         <div className="footer-grid">
           <div className="brand">
-            <Image src="/icon.svg" alt="Srutam logo" width={26} height={26} loading="lazy" />
+            <Image src="/apple-icon.png" alt="Srutam logo" width={26} height={26} loading="lazy" />
             <span>SRUTAM</span>
           </div>
           <p className="footer-tag">Private AI voice notes for Android. Built by @iamjustkrishna.</p>
