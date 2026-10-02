@@ -1,27 +1,28 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Fraunces, Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import { SiteJsonLd } from '@/components/seo/json-ld'
 import { ThemeProvider } from '@/components/site/theme-provider'
 import { PLAY_STORE_URL, SITE_URL } from '@/lib/site'
 import './globals.css'
 
-const display = Fraunces({
-  subsets: ['latin'],
+const display = localFont({
+  src: '../public/fonts/Fraunces.woff2',
+  weight: '100 900',
   variable: '--font-display',
   display: 'swap',
-  axes: ['opsz', 'SOFT', 'WONK'],
 })
 
-const sans = Inter({
-  subsets: ['latin'],
+const sans = localFont({
+  src: '../public/fonts/Manrope.woff2',
+  weight: '200 800',
   variable: '--font-sans',
   display: 'swap',
 })
 
 const TITLE = 'Srutam — Private AI Voice Notes App | Offline Transcription'
 const DESCRIPTION =
-  'Srutam is a private on-device AI voice notes app for Android. Offline Whisper transcription, AI summaries, tasks, and conversational search. Zero audio uploads. BYOK + MCP for developers.'
+  'Capture thoughts with Srutam for Android. On-device transcription works offline; optional connected AI turns notes into summaries, tasks, and searchable answers.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -55,7 +56,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     images: [
-      { url: '/apple-icon.png', alt: 'Srutam — private AI voice notes app' },
+      {
+        url: '/media/app-icon.png',
+        alt: 'Srutam — private AI voice notes app',
+      },
     ],
   },
   twitter: {
@@ -63,15 +67,15 @@ export const metadata: Metadata = {
     title: TITLE,
     description:
       'Private AI voice notes for Android: offline transcription, summaries, tasks, and chat over your notes.',
-    images: ['/apple-icon.png'],
+    images: ['/media/app-icon.png'],
   },
   icons: {
     icon: [
       { url: '/icon-light-32x32.jpg', media: '(prefers-color-scheme: light)' },
       { url: '/icon-dark-32x32.jpg', media: '(prefers-color-scheme: dark)' },
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/media/app-icon.png', sizes: '180x180', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    apple: '/media/app-icon.png',
   },
   manifest: '/manifest.webmanifest',
   other: {
@@ -84,12 +88,12 @@ export const viewport: Viewport = {
   initialScale: 1,
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fbfcfe' },
-    { media: '(prefers-color-scheme: dark)', color: '#050714' },
+    { media: '(prefers-color-scheme: light)', color: '#f8f9f6' },
+    { media: '(prefers-color-scheme: dark)', color: '#101722' },
   ],
 }
 
-const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('srutam-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.classList.toggle('dark',t==='dark');document.documentElement.style.colorScheme=t;}catch(e){}})();`
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('srutam-theme')||'light';document.documentElement.classList.toggle('dark',t==='dark');document.documentElement.style.colorScheme=t;}catch(e){}})();`
 
 export default function RootLayout({
   children,
@@ -97,7 +101,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${display.variable} ${sans.variable}`}
+    >
       <head>
         <link rel="preconnect" href="https://play.google.com" />
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
@@ -105,7 +113,8 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ThemeProvider>{children}</ThemeProvider>
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' &&
+          process.env.VERCEL === '1' && <Analytics />}
       </body>
     </html>
   )

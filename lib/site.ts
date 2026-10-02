@@ -12,23 +12,23 @@ export const faqs: Faq[] = [
   },
   {
     q: 'Does Srutam work offline?',
-    a: 'Yes for capture and transcription. Recording and on-device Whisper transcription work without internet after first install. AI summaries, conversational chat, and reminders need your own AI key (BYOK) and therefore need connectivity when you use those features.',
+    a: 'Recording and on-device transcription work offline once the speech model is set up. Optional AI summaries and conversational answers use your chosen AI provider and need connectivity. You can capture a thought now and use connected features later.',
   },
   {
     q: 'How does on-device transcription work?',
-    a: 'Srutam runs Whisper (via Sherpa-ONNX) directly on your Android phone. Speech-to-text happens locally, so your audio never leaves the device for transcription. You get searchable text in about 30 seconds for a typical thought.',
+    a: 'Srutam runs Whisper via Sherpa-ONNX directly on your Android phone. Speech-to-text happens locally, without uploading audio for transcription. Processing time depends on your device and the length of your recording.',
   },
   {
     q: 'How does Srutam turn voice memos into action items?',
-    a: 'Every note is shaped into a summary, key points, and three buckets: Next Steps, Ideas, and Decisions. Detected tasks become interactive checklists, and meetings, deadlines, and appointments can become timely reminders you can act on immediately.',
+    a: 'Optional connected AI can shape a transcript into a summary, key points, and three buckets: Next Steps, Ideas, and Decisions. Detected tasks become interactive checklists, and reminders help you follow through.',
   },
   {
-    q: 'Srutam vs Otter.ai or Fireflies: what is different?',
-    a: 'Otter.ai and Fireflies are cloud meeting recorders built for teams. Srutam is a private, local-first voice notes app for individuals: on-device transcription, zero audio uploads for basic use, no account required to capture, plus BYOK and an MCP server so developers can query their own memos from their coding workflow.',
+    q: 'Do I need an account to start?',
+    a: 'No account is needed to capture your thoughts. Start with recording and local transcription. Cloud sync is optional, and connected AI features use your own provider key.',
   },
   {
-    q: 'What is the best private alternative to Otter for personal voice notes?',
-    a: 'If you want personal voice notes that stay on your phone, Srutam is built for that: offline Whisper transcription, local storage, privacy lock, and optional BYOK AI chat with cited source notes — instead of uploading every meeting to a cloud workspace.',
+    q: 'Is the website demo recording my voice?',
+    a: 'No. The demo uses a prepared sample and never accesses your microphone. Its transcript, insights, and answers are examples. Nothing you enter in the demo is uploaded, and refreshing the page resets it.',
   },
   {
     q: 'Can developers use Srutam with their coding workflow?',
@@ -36,6 +36,6 @@ export const faqs: Faq[] = [
   },
   {
     q: 'Is Srutam good for ADHD brain dumps, students, and founders?',
-    a: 'Yes. Speak freely without organizing first — Srutam structures the chaos into summaries, checklists, and searchable answers. Students turn lectures into revision notes, founders capture ideas while walking, and professionals convert 30-minute meetings into 2-second answers.',
+    a: 'Srutam gives passing thoughts somewhere to land. Capture an idea on a walk, a study note, or a brain dump. Use optional connected AI to explore summaries and next steps, without needing to organize everything before you speak.',
   },
 ]

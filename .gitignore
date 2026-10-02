@@ -13,3 +13,12 @@ __v0_jsx-dev-runtime.ts
 node_modules
 .next/
 .DS_Store
+*.tsbuildinfo
+.playwright-cli/
+output/
+
+# Local Srutam video production, source assets, renders and production notes
+/srutam-video/
+/docs/superpowers/plans/*-srutam-product-video*.md
+/docs/superpowers/specs/*-srutam-product-video*.md
+/.superpowers/sdd/*-srutam-product-video/

@@ -24,7 +24,7 @@
 ## FAQ (abridged — full answers on site + llms-full.txt)
 - Is Srutam private? Yes — local transcription + storage, opt-in sync.
 - Does it work offline? Capture + transcription yes; BYOK AI features need internet.
-- Srutam vs Otter.ai/Fireflies? They are cloud team recorders; Srutam is local-first personal notes.
-- How do voice memos become tasks? Auto Next Steps → checklists + reminders.
+- Does the website demo use my microphone? No. It uses a prepared sample without recording or uploading.
+- How do voice memos become tasks? Optional connected AI extracts Next Steps for checklists and reminders.
 
-Last updated: 2026-09-24
+Last updated: 2026-09-28

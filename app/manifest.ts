@@ -8,11 +8,10 @@ export default function manifest(): MetadataRoute.Manifest {
       'Private on-device AI voice notes app for Android. Offline Whisper transcription, summaries, tasks, and conversational search.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#fbfcfe',
-    theme_color: '#2563eb',
+    background_color: '#f8f9f6',
+    theme_color: '#315bda',
     icons: [
-      { src: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
-      { src: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      { src: '/media/app-icon.png', sizes: '180x180', type: 'image/png' },
       { src: '/icon-light-32x32.jpg', sizes: '32x32', type: 'image/jpeg' },
     ],
   }

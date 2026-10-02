@@ -70,7 +70,7 @@ export function HowToJsonLd() {
       {
         '@type': 'HowToStep',
         name: 'Understand',
-        text: 'Your note is transcribed on-device with Whisper, then shaped into a summary, key points, Next Steps, Ideas, and Decisions.',
+        text: 'Your note is transcribed on-device with Whisper. Optional connected AI can then produce a summary, key points, Next Steps, Ideas, and Decisions.',
       },
       {
         '@type': 'HowToStep',

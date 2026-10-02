@@ -1,64 +1,30 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
-function getInitial(): 'light' | 'dark' {
-  if (typeof window === 'undefined') return 'light'
-  try {
-    const saved = window.localStorage.getItem('srutam-theme')
-    if (saved === 'light' || saved === 'dark') return saved
-  } catch {}
-  return window.matchMedia?.('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light'
-}
+const ThemeContext = createContext({ dark: false, toggle: () => {} })
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<'light' | 'dark'>(getInitial)
-
+  const [dark, setDark] = useState(false)
   useEffect(() => {
-    const root = document.documentElement
-    root.classList.toggle('dark', theme === 'dark')
-    root.style.colorScheme = theme
-    try {
-      window.localStorage.setItem('srutam-theme', theme)
-    } catch {}
-  }, [theme])
-
-  useEffect(() => {
-    const mq = window.matchMedia?.('(prefers-color-scheme: dark)')
-    if (!mq) return
-    const onChange = (e: MediaQueryListEvent) => {
-      try {
-        if (window.localStorage.getItem('srutam-theme')) return
-      } catch {}
-      setTheme(e.matches ? 'dark' : 'light')
-    }
-    mq.addEventListener?.('change', onChange)
-    return () => mq.removeEventListener?.('change', onChange)
+    setDark(document.documentElement.classList.contains('dark'))
   }, [])
-
+  function toggle() {
+    const next = !document.documentElement.classList.contains('dark')
+    document.documentElement.classList.toggle('dark', next)
+    document.documentElement.style.colorScheme = next ? 'dark' : 'light'
+    try {
+      localStorage.setItem('srutam-theme', next ? 'dark' : 'light')
+    } catch {}
+    setDark(next)
+  }
   return (
-    <div className={theme === 'dark' ? 'site dark' : 'site'} data-theme={theme}>
-      <ThemeSetter theme={theme} onToggle={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))} />
-      {children}
-    </div>
+    <ThemeContext.Provider value={{ dark, toggle }}>
+      <div className="site">{children}</div>
+    </ThemeContext.Provider>
   )
 }
 
-// Context-free bridge: header buttons dispatch a toggle event; provider listens.
-function ThemeSetter({ theme, onToggle }: { theme: string; onToggle: () => void }) {
-  useEffect(() => {
-    const handler = () => onToggle()
-    window.addEventListener('srutam:toggle-theme', handler)
-    return () => window.removeEventListener('srutam:toggle-theme', handler)
-  }, [onToggle])
-  useEffect(() => {
-    document.documentElement.dataset.activeTheme = theme
-  }, [theme])
-  return null
-}
-
-export function toggleTheme() {
-  window.dispatchEvent(new Event('srutam:toggle-theme'))
+export function useTheme() {
+  return useContext(ThemeContext)
 }

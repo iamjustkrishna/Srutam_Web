@@ -2,62 +2,72 @@
 
 import { ArrowUpRight, Menu, Moon, Sun, X } from 'lucide-react'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { PLAY_STORE_URL } from '@/lib/site'
-import { toggleTheme } from './theme-provider'
-
-export function ThemeToggleButton({ initialDark }: { initialDark?: boolean }) {
-  const [dark, setDark] = useState(!!initialDark)
-  return (
-    <button
-      className="theme-toggle"
-      type="button"
-      aria-label="Toggle color theme"
-      aria-pressed={dark}
-      onClick={() => {
-        setDark((d) => !d)
-        toggleTheme()
-      }}
-    >
-      {dark ? <Sun size={17} /> : <Moon size={17} />}
-    </button>
-  )
-}
+import { useTheme } from './theme-provider'
 
 export function SiteHeader() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [open, setOpen] = useState(false)
+  const { dark, toggle } = useTheme()
+  const menuButton = useRef<HTMLButtonElement>(null)
+  useEffect(() => {
+    function escape(event: KeyboardEvent) {
+      if (event.key === 'Escape' && open) {
+        setOpen(false)
+        menuButton.current?.focus()
+      }
+    }
+    window.addEventListener('keydown', escape)
+    return () => window.removeEventListener('keydown', escape)
+  }, [open])
   return (
     <header className="site-header">
       <nav className="nav shell" aria-label="Primary">
-        <a href="#top" className="brand" aria-label="Srutam home">
-          <Image src="/apple-icon.png" alt="Srutam logo" width={34} height={34} priority />
-          <span>SRUTAM</span>
+        <a className="brand" href="#top" aria-label="Srutam home">
+          <Image src="/media/app-icon.png" alt="" width={32} height={32} />
+          <span>
+            srutam<span className="brand-dot">.</span>
+          </span>
         </a>
-        <div className={`nav-links ${menuOpen ? 'open' : ''}`} id="primary-menu">
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#privacy">Privacy</a>
-          <a href="#faq">FAQ</a>
+        <div className={`nav-links ${open ? 'open' : ''}`} id="primary-menu">
+          <a href="#how" onClick={() => setOpen(false)}>
+            The experience
+          </a>
+          <a href="#features" onClick={() => setOpen(false)}>
+            Possibilities
+          </a>
+          <a href="#privacy" onClick={() => setOpen(false)}>
+            Your privacy
+          </a>
           <a
-            className="nav-cta"
+            className="nav-download"
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noreferrer"
           >
-            Get the app <ArrowUpRight size={15} aria-hidden />
+            Get Srutam <ArrowUpRight size={15} />
           </a>
-          <ThemeToggleButton />
         </div>
-        <button
-          className="menu-toggle"
-          type="button"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-          aria-controls="primary-menu"
-        >
-          {menuOpen ? <X aria-hidden /> : <Menu aria-hidden />}
-        </button>
+        <div className="nav-tools">
+          <button
+            className="icon-button"
+            onClick={toggle}
+            aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
+            aria-pressed={dark}
+          >
+            {dark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button
+            ref={menuButton}
+            className="icon-button menu-toggle"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={open}
+            aria-controls="primary-menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
     </header>
   )
