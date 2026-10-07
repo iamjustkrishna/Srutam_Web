@@ -1,13 +1,13 @@
 # Srutam — Private AI Voice Notes App (Android)
 
-> Private on-device AI voice notes: offline Whisper transcription, summaries, tasks, conversational chat over notes, BYOK + MCP server. Zero audio uploads for basic transcription.
+> Private on-device AI voice notes: offline transcription, summaries, tasks, conversational chat over notes, BYOK + MCP server. Zero audio uploads for basic transcription.
 
 ## Core pages
 - Home: https://srutam.iamjustkrishna.app/ — capture → understand → act; features; privacy; audiences; FAQ; download
 - Google Play: https://play.google.com/store/apps/details?id=space.iamjustkrishna.srutam
 
 ## What Srutam does
-- On-device transcription with Sherpa-ONNX Whisper; audio stays on the phone
+- On-device speech recognition; audio stays on the phone
 - AI insights: Next Steps, Ideas, Decisions; summary + key points + WIIFM
 - Conversational AI chat across recordings with cited source notes
 - Actionable task checklists + smart reminders from voice

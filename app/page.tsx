@@ -21,7 +21,7 @@ import { ProductDemo } from '@/components/site/product-demo'
 import { ClarityPreview, StaticPhone } from '@/components/site/phone-ui'
 import { FilmPlayer } from '@/components/site/film-player'
 import { SiteMotion } from '@/components/site/site-motion'
-import { HowToJsonLd } from '@/components/seo/json-ld'
+import { HowToJsonLd, SiteJsonLd } from '@/components/seo/json-ld'
 import { PLAY_STORE_URL, faqs } from '@/lib/site'
 
 function Download({ label = 'Get Srutam for Android' }: { label?: string }) {
@@ -53,6 +53,7 @@ export default function Page() {
         Skip to content
       </a>
       <SiteHeader />
+      <SiteJsonLd />
       <HowToJsonLd />
       <SiteMotion>
         <main id="main">
@@ -451,6 +452,7 @@ export default function Page() {
         <div>
           <a href="#privacy">Privacy</a>
           <a href="#faq">FAQ</a>
+          <a href="/legal/third-party-notices">Third-party notices</a>
           <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
             Google Play <ArrowUpRight size={12} />
           </a>

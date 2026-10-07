@@ -8,7 +8,7 @@ export const PLAY_STORE_URL =
 export const faqs: Faq[] = [
   {
     q: 'Is Srutam private? Where do my voice notes go?',
-    a: 'Yes. Srutam transcribes on-device with Sherpa-ONNX Whisper and stores notes in a local Room database on your phone. Basic transcription uploads zero audio. A privacy lock keeps sensitive notes out of sync and away from external agents. Cloud sync is opt-in.',
+    a: 'Yes. Srutam transcribes on-device and stores notes in a local Room database on your phone. Basic transcription uploads zero audio. A privacy lock keeps sensitive notes out of sync and away from external agents. Cloud sync is opt-in.',
   },
   {
     q: 'Does Srutam work offline?',
@@ -16,7 +16,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'How does on-device transcription work?',
-    a: 'Srutam runs Whisper via Sherpa-ONNX directly on your Android phone. Speech-to-text happens locally, without uploading audio for transcription. Processing time depends on your device and the length of your recording.',
+    a: 'Srutam runs on-device speech recognition directly on your Android phone. Speech-to-text happens locally, without uploading audio for transcription. Processing time depends on your device and the length of your recording.',
   },
   {
     q: 'How does Srutam turn voice memos into action items?',

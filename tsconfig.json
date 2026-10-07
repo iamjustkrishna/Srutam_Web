@@ -29,5 +29,9 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "srutam-video"]
+  "exclude": [
+    "node_modules",
+    "srutam-video",
+    "tools/video_pipeline/tests/fixtures"
+  ]
 }

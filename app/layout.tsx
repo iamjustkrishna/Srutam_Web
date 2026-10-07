@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
-import { SiteJsonLd } from '@/components/seo/json-ld'
 import { ThemeProvider } from '@/components/site/theme-provider'
 import { PLAY_STORE_URL, SITE_URL } from '@/lib/site'
 import './globals.css'
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
     'private voice notes app',
     'offline transcription app android',
     'on-device AI voice memo',
-    'whisper transcription offline',
+    'on-device speech recognition',
     'voice memo to tasks',
     'AI meeting notes private',
     'ADHD voice notes app',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description:
-      'Turn spoken thoughts into organized, searchable knowledge. On-device Whisper transcription — your audio stays on your phone.',
+      'Turn spoken thoughts into organized, searchable knowledge. On-device transcription — your audio stays on your phone.',
     url: SITE_URL,
     siteName: 'Srutam',
     locale: 'en_US',
@@ -109,7 +108,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://play.google.com" />
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
-        <SiteJsonLd />
       </head>
       <body className="antialiased">
         <ThemeProvider>{children}</ThemeProvider>

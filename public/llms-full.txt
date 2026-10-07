@@ -9,7 +9,7 @@ Play: https://play.google.com/store/apps/details?id=space.iamjustkrishna.srutam
 Private voice notes for Android. Capture passing thoughts, transcribe on-device, and use optional connected AI for summaries and answers. Processing time depends on the device and recording length.
 
 ### Features
-- On-device transcription (Sherpa-ONNX Whisper): speech-to-text runs locally
+- On-device transcription: speech-to-text runs locally
 - AI insights extraction: every note → Next Steps, Ideas, Decisions + summary, key points, WIIFM
 - Conversational AI chat: ask across recordings, answers cite source notes
 - Actionable task checklist: detected tasks become finishable checklists
@@ -35,13 +35,13 @@ Transcription on-device. Notes in local Room DB. Privacy lock excludes notes fro
 
 ## FAQ (complete)
 ### Is Srutam private? Where do my voice notes go?
-Yes. On-device Whisper transcription + local Room storage. Zero audio uploads for basic transcription. Privacy lock + opt-in sync.
+Yes. On-device transcription + local Room storage. Zero audio uploads for basic transcription. Privacy lock + opt-in sync.
 
 ### Does Srutam work offline?
 Capture and transcription work offline once the speech model is set up. BYOK summaries and chat need internet when used.
 
 ### How does on-device transcription work?
-Whisper via Sherpa-ONNX runs on the phone; audio never leaves the device for transcription.
+On-device speech recognition runs on the phone; audio never leaves the device for transcription.
 
 ### How do voice memos become action items?
 Auto Next Steps/Ideas/Decisions → interactive checklists + reminders.

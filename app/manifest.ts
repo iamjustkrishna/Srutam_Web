@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Srutam — Private AI Voice Notes',
     short_name: 'Srutam',
     description:
-      'Private on-device AI voice notes app for Android. Offline Whisper transcription, summaries, tasks, and conversational search.',
+      'Private on-device AI voice notes app for Android. Offline transcription, summaries, tasks, and conversational search.',
     start_url: '/',
     display: 'standalone',
     background_color: '#f8f9f6',

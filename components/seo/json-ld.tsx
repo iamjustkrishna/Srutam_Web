@@ -33,7 +33,7 @@ export function SiteJsonLd() {
         url: SITE_URL,
         downloadUrl: PLAY_STORE_URL,
         description:
-          'Private on-device AI voice notes app for Android. Offline Whisper transcription, AI summaries, tasks, conversational chat over notes, BYOK and MCP server support.',
+          'Private on-device AI voice notes app for Android. Offline transcription, AI summaries, tasks, conversational chat over notes, BYOK and MCP server support.',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       },
       {
@@ -70,7 +70,7 @@ export function HowToJsonLd() {
       {
         '@type': 'HowToStep',
         name: 'Understand',
-        text: 'Your note is transcribed on-device with Whisper. Optional connected AI can then produce a summary, key points, Next Steps, Ideas, and Decisions.',
+        text: 'Your note is transcribed on-device. Optional connected AI can then produce a summary, key points, Next Steps, Ideas, and Decisions.',
       },
       {
         '@type': 'HowToStep',

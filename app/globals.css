@@ -1854,6 +1854,7 @@ h2 em {
 }
 .footer > div {
   display: flex;
+  flex-wrap: wrap;
   gap: 22px;
 }
 .footer a:not(.brand) {
