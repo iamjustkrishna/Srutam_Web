@@ -25,12 +25,12 @@ async (page) => {
   check(await page.title() === 'Third-party notices | Srutam', 'Wrong title')
   check(
     await page.locator('link[rel="canonical"]').getAttribute('href') ===
-      `https://srutam.iamjustkrishna.app${path}`,
+      `https://srutam.iamjustkrishna.space${path}`,
     'Wrong notices canonical',
   )
   check(
     await page.locator('meta[property="og:url"]').getAttribute('content') ===
-      `https://srutam.iamjustkrishna.app${path}`,
+      `https://srutam.iamjustkrishna.space${path}`,
     'Wrong social URL',
   )
   check(await page.locator('script[type="application/ld+json"]').count() === 0,
